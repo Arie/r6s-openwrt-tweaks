@@ -14,7 +14,7 @@ LEDs are remapped so they match the port order. LED marked "WAN" is WAN1, LED ma
 
 ## IRQs, RSS
 
-RSS is required via the r8125-rss kernel module. The irqbalance config is set to ignore the IRQs for the irqs of eth1 and eth2 interfaces (r8125-rss). 
+RSS is required via the r8125-rss kernel module. The irqbalance config is set to ignore the IRQs of the eth1 and eth2 interfaces (r8125-rss). 
 The `/etc/hotplug.d/net/40-smp-affinity` file is changed to spread the load of the two 2.5Gbit interfaces over different cores.
 
 ## Core frequency tweaks
