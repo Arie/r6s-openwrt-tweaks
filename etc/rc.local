@@ -1,0 +1,12 @@
+# Put your custom commands here that should be executed once
+# the system init finished. By default this file does nothing.
+
+echo ondemand > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
+echo ondemand > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
+echo ondemand > /sys/devices/system/cpu/cpufreq/policy6/scaling_governor
+echo 10 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold
+echo 10 > /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
+/root/net-smp-affinity
+
+exit 0
+
